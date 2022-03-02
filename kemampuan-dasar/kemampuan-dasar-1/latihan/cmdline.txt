@@ -1,0 +1,558 @@
+PS C:\Scripts> cd kemampuan-dasar-1\latihan
+PS C:\Scripts\kemampuan-dasar-1\latihan>
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> ping google.com
+
+Pinging google.com [216.239.38.120] with 32 bytes of data:
+Reply from 216.239.38.120: bytes=32 time=24ms TTL=113
+Reply from 216.239.38.120: bytes=32 time=26ms TTL=113
+Reply from 216.239.38.120: bytes=32 time=25ms TTL=113
+Reply from 216.239.38.120: bytes=32 time=26ms TTL=113
+
+Ping statistics for 216.239.38.120:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 24ms, Maximum = 26ms, Average = 25ms
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           ac -> Add-Content
+Alias           asnp -> Add-PSSnapin
+Alias           cat -> Get-Content
+Alias           cd -> Set-Location
+Alias           CFS -> ConvertFrom-String                          3.1.0.0    Microsoft.PowerShell.Utility
+Alias           chdir -> Set-Location
+Alias           clc -> Clear-Content
+Alias           clear -> Clear-Host
+Alias           clhy -> Clear-History
+Alias           cli -> Clear-Item
+Alias           clp -> Clear-ItemProperty
+Alias           cls -> Clear-Host
+Alias           clv -> Clear-Variable
+Alias           cnsn -> Connect-PSSession
+Alias           compare -> Compare-Object
+Alias           copy -> Copy-Item
+Alias           cp -> Copy-Item
+Alias           cpi -> Copy-Item
+Alias           cpp -> Copy-ItemProperty
+Alias           curl -> Invoke-WebRequest
+Alias           cvpa -> Convert-Path
+Alias           dbp -> Disable-PSBreakpoint
+Alias           del -> Remove-Item
+Alias           diff -> Compare-Object
+Alias           dir -> Get-ChildItem
+Alias           dnsn -> Disconnect-PSSession
+Alias           ebp -> Enable-PSBreakpoint
+Alias           echo -> Write-Output
+Alias           epal -> Export-Alias
+Alias           epcsv -> Export-Csv
+Alias           epsn -> Export-PSSession
+Alias           erase -> Remove-Item
+Alias           etsn -> Enter-PSSession
+Alias           exsn -> Exit-PSSession
+Alias           fc -> Format-Custom
+Alias           fhx -> Format-Hex                                  3.1.0.0    Microsoft.PowerShell.Utility
+Alias           fl -> Format-List
+Alias           foreach -> ForEach-Object
+Alias           ft -> Format-Table
+Alias           fw -> Format-Wide
+Alias           gal -> Get-Alias
+Alias           gbp -> Get-PSBreakpoint
+Alias           gc -> Get-Content
+Alias           gcb -> Get-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           gci -> Get-ChildItem
+Alias           gcm -> Get-Command
+Alias           gcs -> Get-PSCallStack
+Alias           gdr -> Get-PSDrive
+Alias           ghy -> Get-History
+Alias           gi -> Get-Item
+Alias           gin -> Get-ComputerInfo                            3.1.0.0    Microsoft.PowerShell.Management
+Alias           gjb -> Get-Job
+Alias           gl -> Get-Location
+Alias           gm -> Get-Member
+Alias           gmo -> Get-Module
+Alias           gp -> Get-ItemProperty
+Alias           gps -> Get-Process
+Alias           gpv -> Get-ItemPropertyValue
+Alias           group -> Group-Object
+Alias           gsn -> Get-PSSession
+Alias           gsnp -> Get-PSSnapin
+Alias           gsv -> Get-Service
+Alias           gtz -> Get-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           gu -> Get-Unique
+Alias           gv -> Get-Variable
+Alias           gwmi -> Get-WmiObject
+Alias           h -> Get-History
+Alias           history -> Get-History
+Alias           icm -> Invoke-Command
+Alias           iex -> Invoke-Expression
+Alias           ihy -> Invoke-History
+Alias           ii -> Invoke-Item
+Alias           ipal -> Import-Alias
+Alias           ipcsv -> Import-Csv
+Alias           ipmo -> Import-Module
+Alias           ipsn -> Import-PSSession
+Alias           irm -> Invoke-RestMethod
+Alias           ise -> powershell_ise.exe
+Alias           iwmi -> Invoke-WmiMethod
+Alias           iwr -> Invoke-WebRequest
+Alias           kill -> Stop-Process
+Alias           lp -> Out-Printer
+Alias           ls -> Get-ChildItem
+Alias           man -> help
+Alias           md -> mkdir
+Alias           measure -> Measure-Object
+Alias           mi -> Move-Item
+Alias           mount -> New-PSDrive
+Alias           move -> Move-Item
+Alias           mp -> Move-ItemProperty
+Alias           mv -> Move-Item
+Alias           nal -> New-Alias
+Alias           ndr -> New-PSDrive
+Alias           ni -> New-Item
+Alias           nmo -> New-Module
+Alias           npssc -> New-PSSessionConfigurationFile
+Alias           nsn -> New-PSSession
+Alias           nv -> New-Variable
+Alias           ogv -> Out-GridView
+Alias           oh -> Out-Host
+Alias           popd -> Pop-Location
+Alias           ps -> Get-Process
+Alias           pushd -> Push-Location
+Alias           pwd -> Get-Location
+Alias           r -> Invoke-History
+Alias           rbp -> Remove-PSBreakpoint
+Alias           rcjb -> Receive-Job
+Alias           rcsn -> Receive-PSSession
+Alias           rd -> Remove-Item
+Alias           rdr -> Remove-PSDrive
+Alias           ren -> Rename-Item
+Alias           ri -> Remove-Item
+Alias           rjb -> Remove-Job
+Alias           rm -> Remove-Item
+Alias           rmdir -> Remove-Item
+Alias           rmo -> Remove-Module
+Alias           rni -> Rename-Item
+Alias           rnp -> Rename-ItemProperty
+Alias           rp -> Remove-ItemProperty
+Alias           rsn -> Remove-PSSession
+Alias           rsnp -> Remove-PSSnapin
+Alias           rujb -> Resume-Job
+Alias           rv -> Remove-Variable
+Alias           rvpa -> Resolve-Path
+Alias           rwmi -> Remove-WmiObject
+Alias           sajb -> Start-Job
+Alias           sal -> Set-Alias
+Alias           saps -> Start-Process
+Alias           sasv -> Start-Service
+Alias           sbp -> Set-PSBreakpoint
+Alias           sc -> Set-Content
+Alias           scb -> Set-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           select -> Select-Object
+Alias           set -> Set-Variable
+Alias           shcm -> Show-Command
+Alias           si -> Set-Item
+Alias           sl -> Set-Location
+Alias           sleep -> Start-Sleep
+Alias           sls -> Select-String
+Alias           sort -> Sort-Object
+Alias           sp -> Set-ItemProperty
+Alias           spjb -> Stop-Job
+Alias           spps -> Stop-Process
+Alias           spsv -> Stop-Service
+Alias           start -> Start-Process
+Alias           stz -> Set-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           sujb -> Suspend-Job
+Alias           sv -> Set-Variable
+Alias           swmi -> Set-WmiInstance
+Alias           tee -> Tee-Object
+Alias           trcm -> Trace-Command
+Alias           type -> Get-Content
+Alias           wget -> Invoke-WebRequest
+Alias           where -> Where-Object
+Alias           wjb -> Wait-Job
+Alias           write -> Write-Output
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> ls
+
+
+    Directory: C:\Scripts\kemampuan-dasar-1\latihan
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          3/2/2022   2:38 PM                powershellscripts
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> mkdir TestDir
+
+
+    Directory: C:\Scripts\kemampuan-dasar-1\latihan
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          3/2/2022   2:46 PM                TestDir
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> rmdir TestDir
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> echo "maulana ibrahim"
+maulana ibrahim
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> cat .\myfile.txt
+hello world!!!
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> clear
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> hostname
+DESKTOP-RMHTUQ1
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> whoami
+desktop-rmhtuq1\lenovo
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> gdr
+
+Name           Used (GB)     Free (GB) Provider      Root                                               CurrentLocation
+----           ---------     --------- --------      ----                                               ---------------
+Alias                                  Alias
+C                  75.83         42.76 FileSystem    C:\                                 ...s\kemampuan-dasar-1\latihan
+Cert                                   Certificate   \
+D                   1.08        113.85 FileSystem    D:\
+E                  38.44        777.52 FileSystem    E:\
+Env                                    Environment
+Function                               Function
+HKCU                                   Registry      HKEY_CURRENT_USER
+HKLM                                   Registry      HKEY_LOCAL_MACHINE
+Variable                               Variable
+WSMan                                  WSMan
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> attrib
+A                    C:\Scripts\kemampuan-dasar-1\latihan\myfile.txt
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> bcdboot
+
+Bcdboot - Bcd boot file creation and repair tool.
+
+The bcdboot.exe command-line tool is used to copy critical boot files to the
+system partition and to create a new system BCD store.
+
+bcdboot <source> [/l <locale>] [/s <volume-letter> [/f <firmware>]] [/v]
+                 [/vbcd] [/m [{OS Loader ID}]] [/addlast] [/p] [/c]
+
+  source     Specifies the location of the windows system root.
+
+  /l         Specifies an optional locale parameter to use when
+             initializing the BCD store. The default is US English.
+
+  /s         Specifies an optional volume letter parameter to designate
+             the target system partition where boot environment files are
+             copied.  The default is the system partition identified by
+             the firmware.
+
+  /v         Enables verbose mode.
+
+  /vbcd      Enables BCD logging.
+
+  /m         If an OS loader GUID is provided, this option merges the
+             given loader object with the system template to produce a
+             bootable entry. Otherwise, only global objects are merged.
+
+  /d         Specifies that the existing default windows boot entry
+             should be preserved.
+
+  /f         Used with the /s command, specifies the firmware type of the
+             target system partition. Options for <firmware> are 'UEFI',
+             'BIOS', or 'ALL'.
+
+  /addlast   Specifies that the windows boot manager firmware entry
+             should be added last. The default behavior is to add it
+             first.
+
+  /bcdclean  Clean the BCD Store. By default, simply removes any duplicate
+             entries in the BCD. Can be followed by 'full'. In this case,
+             each entry is scanned. If the corresponding device for that entry
+             does not exist, the entry is deleted.
+
+  /p         Specifies that the windows boot manager firmware entry
+             position should be preserved. If entry does not exist,
+             new entry will be added in the first position.
+
+  /c         Specifies that any existing objects described by the template
+             should not be migrated.
+
+Examples: bcdboot c:\windows /l en-us
+          bcdboot c:\windows /s h:
+          bcdboot c:\windows /s h: /f UEFI
+          bcdboot c:\windows /m {d58d10c6-df53-11dc-878f-00064f4f4e08}
+          bcdboot c:\windows /d /addlast
+          bcdboot c:\windows /p
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> break
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> cacls
+
+ NOTE: Cacls is now deprecated, please use Icacls.
+
+ Displays or modifies access control lists (ACLs) of files
+
+ CACLS filename [/T] [/M] [/L] [/S[:SDDL]] [/E] [/C] [/G user:perm]
+        [/R user [...]] [/P user:perm [...]] [/D user [...]]
+    filename      Displays ACLs.
+    /T            Changes ACLs of specified files in
+                  the current directory and all subdirectories.
+    /L            Work on the Symbolic Link itself versus the target
+    /M            Changes ACLs of volumes mounted to a directory
+    /S            Displays the SDDL string for the DACL.
+    /S:SDDL       Replaces the ACLs with those specified in the SDDL string
+                  (not valid with /E, /G, /R, /P, or /D).
+    /E            Edit ACL instead of replacing it.
+    /C            Continue on access denied errors.
+    /G user:perm  Grant specified user access rights.
+                  Perm can be: R  Read
+                               W  Write
+                               C  Change (write)
+                               F  Full control
+    /R user       Revoke specified user's access rights (only valid with /E).
+    /P user:perm  Replace specified user's access rights.
+                  Perm can be: N  None
+                               R  Read
+                               W  Write
+                               C  Change (write)
+                               F  Full control
+    /D user       Deny specified user access.
+ Wildcards can be used to specify more than one file in a command.
+ You can specify more than one user in a command.
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> cmd
+Microsoft Windows [Version 10.0.19044.1526]
+(c) Microsoft Corporation. All rights reserved.
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> compact
+
+ Listing C:\Scripts\kemampuan-dasar-1\latihan\
+ New files added to this directory will not be compressed.
+
+       34 :        34 = 1,0 to 1   myfile.txt
+        0 :         0 = 1,0 to 1   powershellscripts
+
+Of 2 files within 1 directories
+0 are compressed and 2 are not compressed.
+34 total bytes of data are stored in 34 bytes.
+The compression ratio is 1,0 to 1.
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> cscript
+Microsoft (R) Windows Script Host Version 5.812
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Usage: CScript scriptname.extension [option...] [arguments...]
+
+Options:
+ //B         Batch mode: Suppresses script errors and prompts from displaying
+ //D         Enable Active Debugging
+ //E:engine  Use engine for executing script
+ //H:CScript Changes the default script host to CScript.exe
+ //H:WScript Changes the default script host to WScript.exe (default)
+ //I         Interactive mode (default, opposite of //B)
+ //Job:xxxx  Execute a WSF job
+ //Logo      Display logo (default)
+ //Nologo    Prevent logo display: No banner will be shown at execution time
+ //S         Save current command line options for this user
+ //T:nn      Time out in seconds:  Maximum time a script is permitted to run
+ //X         Execute script in debugger
+ //U         Use Unicode for redirected I/O from the console
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> date
+
+Wednesday, March 2, 2022 3:02:49 PM
+
+PS C:\Scripts\kemampuan-dasar-1\latihan> dir
+
+
+    Directory: C:\Scripts\kemampuan-dasar-1\latihan
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          3/2/2022   2:51 PM                powershellscripts
+-a----          3/2/2022   2:51 PM             34 myfile.txt
+
+PS C:\Scripts\Kemampuan-dasar-1\latihan> mv .\myfile.txt .\powershellscripts
+PS C:\Scripts\Kemampuan-dasar-1\latihan\powershellscripts> ls
+
+
+    Directory: C:\Scripts\Kemampuan-dasar-1\latihan\powershellscripts
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          3/2/2022   2:51 PM           8014 cmdline.txt
+-a----          3/2/2022   2:51 PM             34 myfile.txt
+
+PS C:\Scripts\Kemampuan-dasar-1\latihan\powershellscripts> fsutil file
+---- FILE Commands Supported ----
+
+createNew                Creates a new file of a specified size
+findBySID                Find a file by security identifier
+layout                   Query all the information available about the file
+optimizeMetadata         Optimize metadata for a file
+queryAllocRanges         Query the allocated ranges for a file
+queryCaseSensitiveInfo   Query the case sensitive information for a directory
+queryEA                  Query the extended attributes (EA) information for a file
+queryExtents             Query the extents for a file
+queryExtentsAndRefCounts Query the extents and their corresponding refcounts for a file
+queryFileID              Queries the file ID of the specified file
+queryFileNameById        Displays a random link name for the file ID
+queryOptimizeMetadata    Query the optimize metadata state for a file
+queryValidData           Queries the valid data length for a file
+setCaseSensitiveInfo     Set the case sensitive information for a directory
+setShortName             Set the short name for a file
+setValidData             Set the valid data length for a file
+setZeroData              Set the zero data for a file
+setEOF                   Sets the end of file for an existing file
+setStrictlySequential    Sets ReFS SMR file as strictly sequential
+
+PS C:\Scripts\Kemampuan-dasar-1\latihan> klist
+
+Current LogonId is 0:0x4e8e31
+
+Cached Tickets: (0)
+
+PS C:\Scripts\Kemampuan-dasar-1\latihan> label
+Volume in drive C: has no label
+Volume Serial Number is 0C1A-07CE
+
+PS C:\Scripts\Kemampuan-dasar-1\latihan> makecab
+Cabinet Maker - Lossless Data Compression Tool
+
+MAKECAB [/V[n]] [/D var=value ...] [/L dir] source [destination]
+MAKECAB [/V[n]] [/D var=value ...] /F directive_file [...]
+
+  source         File to compress.
+  destination    File name to give compressed file.  If omitted, the
+                 last character of the source file name is replaced
+                 with an underscore (_) and used as the destination.
+  /F directives  A file with MakeCAB directives (may be repeated). Refer to
+                 Microsoft Cabinet SDK for information on directive_file.
+  /D var=value   Defines variable with specified value.
+  /L dir         Location to place destination (default is current directory).
+  /V[n]          Verbosity level (1..3).
+
+PS C:\Scripts\Kemampuan-dasar-1\latihan> mode
+
+Status for device CON:
+----------------------
+    Lines:          3000
+    Columns:        120
+    Keyboard rate:  31
+    Keyboard delay: 1
+    Code page:      437
+
+PS C:\Scripts\Kemampuan-dasar-1\latihan> msg
+Send a message to a user.
+
+MSG {username | sessionname | sessionid | @filename | *}
+    [/SERVER:servername] [/TIME:seconds] [/V] [/W] [message]
+
+  username            Identifies the specified username.
+  sessionname         The name of the session.
+  sessionid           The ID of the session.
+  @filename           Identifies a file containing a list of usernames,
+                      sessionnames, and sessionids to send the message to.
+  *                   Send message to all sessions on specified server.
+  /SERVER:servername  server to contact (default is current).
+  /TIME:seconds       Time delay to wait for receiver to acknowledge msg.
+  /V                  Display information about actions being performed.
+  /W                  Wait for response from user, useful with /V.
+  message             Message to send.  If none specified, prompts for it
+                      or reads from stdin.
+
+PS C:\Scripts\Kemampuan-dasar-1\latihan> netsh
+netsh>
+netsh>
+netsh>
+netsh>a
+
+netsh>c
+
+netsh>netcfg
+The following command was not found: netcfg.
+netsh>-c
+The following command was not found: -c.
+netsh>-p
+The following command was not found: -p.
+netsh>out
+The following command was not found: out.
+netsh>/?
+
+The following commands are available:
+
+Commands in this context:
+..             - Goes up one context level.
+?              - Displays a list of commands.
+abort          - Discards changes made while in offline mode.
+add            - Adds a configuration entry to a list of entries.
+advfirewall    - Changes to the `netsh advfirewall' context.
+alias          - Adds an alias.
+branchcache    - Changes to the `netsh branchcache' context.
+bridge         - Changes to the `netsh bridge' context.
+bye            - Exits the program.
+commit         - Commits changes made while in offline mode.
+delete         - Deletes a configuration entry from a list of entries.
+dhcpclient     - Changes to the `netsh dhcpclient' context.
+dnsclient      - Changes to the `netsh dnsclient' context.
+dump           - Displays a configuration script.
+exec           - Runs a script file.
+exit           - Exits the program.
+firewall       - Changes to the `netsh firewall' context.
+help           - Displays a list of commands.
+http           - Changes to the `netsh http' context.
+interface      - Changes to the `netsh interface' context.
+ipsec          - Changes to the `netsh ipsec' context.
+lan            - Changes to the `netsh lan' context.
+mbn            - Changes to the `netsh mbn' context.
+namespace      - Changes to the `netsh namespace' context.
+netio          - Changes to the `netsh netio' context.
+offline        - Sets the current mode to offline.
+online         - Sets the current mode to online.
+p2p            - Changes to the `netsh p2p' context.
+popd           - Pops a context from the stack.
+pushd          - Pushes current context on stack.
+quit           - Exits the program.
+ras            - Changes to the `netsh ras' context.
+rpc            - Changes to the `netsh rpc' context.
+set            - Updates configuration settings.
+show           - Displays information.
+trace          - Changes to the `netsh trace' context.
+unalias        - Deletes an alias.
+wcn            - Changes to the `netsh wcn' context.
+wfp            - Changes to the `netsh wfp' context.
+winhttp        - Changes to the `netsh winhttp' context.
+winsock        - Changes to the `netsh winsock' context.
+wlan           - Changes to the `netsh wlan' context.
+
+The following sub-contexts are available:
+ advfirewall branchcache bridge dhcpclient dnsclient firewall http interface ipsec lan mbn namespace netio p2p ras rpc trace wcn wfp winhttp winsock wlan
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+
+netsh>lan
+netsh lan>bye
+
+PS C:\Scripts\Kemampuan-dasar-1\latihan> sc config
+
+cmdlet Set-Content at command pipeline position 1
+Supply values for the following parameters:
+Value[0]: 1
+V
+
+
+
+
+
+
+
+

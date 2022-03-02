@@ -1,426 +1,595 @@
-# Getting Started
-
-## Step 1 - Creates a new project and hosts it on GitHub
-
-### Create folder for your project
+# Step 1: Alice creates a new project and hosts it on GitHub.
 
 ```
-mkdir rhymes
-cd rhymes
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes
+$ git init
+Initialized empty Git repository in C:/Users/lenovo/Documents/GitHub/rhymes/.git/
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ touch readme.txt
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git add readme.txt
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git commit -m "first commit"
+[master (root-commit) 7982b1f] first commit
+1 file changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 readme.txt
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ echo 'This repo is a collection of my favorite nursery rhymes.' >> README.txt
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git status
+On branch master
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git diff
+warning: LF will be replaced by CRLF in readme.txt.
+The file will have its original line endings in your working directory
+diff --git a/readme.txt b/readme.txt
+index e69de29..c83e022 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -0,0 +1 @@
++This repo is a collection of my favorite nursery rhymes.
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git add README.txt
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ commit -m 'Addded project overview to README.txt'
+bash: commit: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ commit -m "Addded project overview to README.txt"
+bash: commit: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ commit -m "Addded project overview to readme.txt"
+bash: commit: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ commit -m "Added project overview to README.txt"
+bash: commit: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git commit -m 'Added project overview to README.txt'
+On branch master
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ wget https://www.acquia.com/sites/default/files/blog/all-around-the-mulberry-bush.txt
+bash: wget: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ wget https://github.com/bryanhirsch/rhymes/blob/master/all-around-the-mulberry-bush.txt
+bash: wget: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ wget https://www.acquia.com/sites/default/files/blog/jack-and-jill.txt
+bash: wget: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ wget https://www.acquia.com/sites/default/files/blog/old-mother-hubbard.txt
+bash: wget: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ wget https://www.acquia.com/sites/default/files/blog/old-mother-hubbard.txt
+bash: wget: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ wget https://www.acquia.com/sites/default/files/blog/hokey-pokey.txt
+bash: wget: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git add all-around-the-mulberry-bush.txt
+fatal: pathspec 'all-around-the-mulberry-bush.txt' did not match any files
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git status
+On branch master
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git commit -m 'Added all-around-the-mulberry-bush.txt.'
+On branch master
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git add jack-and-jill.txt
+fatal: pathspec 'jack-and-jill.txt' did not match any files
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git commit -m 'Added jack-and-jill.txt.'
+On branch master
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified: readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git add .
+warning: LF will be replaced by CRLF in readme.txt.
+The file will have its original line endings in your working directory
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git commit -m 'Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt'
+[master f76b2bc] Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
+1 file changed, 1 insertion(+)
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git log
+commit f76b2bcee138f78f27298cfc48c7a9230eea7ae9 (HEAD -> master)
+Author: captaiinmelody <56020078+captaiinmelody@users.noreply.github.com>
+Date: Wed Mar 2 19:24:07 2022 +0700
+
+    Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
+
+commit 7982b1f2ee01e923f9b4e2af0d2038ac6086054b
+Author: captaiinmelody <56020078+captaiinmelody@users.noreply.github.com>
+Date: Wed Mar 2 19:17:15 2022 +0700
+
+    first commit
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git log --oneline
+f76b2bc (HEAD -> master) Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
+7982b1f first commit
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git log -p
+commit f76b2bcee138f78f27298cfc48c7a9230eea7ae9 (HEAD -> master)
+Author: captaiinmelody <56020078+captaiinmelody@users.noreply.github.com>
+Date: Wed Mar 2 19:24:07 2022 +0700
+
+    Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
+
+diff --git a/readme.txt b/readme.txt
+index e69de29..c83e022 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -0,0 +1 @@
++This repo is a collection of my favorite nursery rhymes.
+
+commit 7982b1f2ee01e923f9b4e2af0d2038ac6086054b
+Author: captaiinmelody <56020078+captaiinmelody@users.noreply.github.com>
+Date: Wed Mar 2 19:17:15 2022 +0700
+
+    first commit
+
+diff --git a/readme.txt b/readme.txt
+new file mode 100644
+index 0000000..e69de29
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git remote add origin https://github.com/maulibrhm1/rhymes.git
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git push -u origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 506 bytes | 168.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/maulibrhm1/rhymes.git
+
+- [new branch] master -> master
+  Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ master -> mastergit push -u origin master
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git push -u origin master
+bash: master: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ Branch 'master' set up to track remote branch 'master' from 'origin'.
+bash: Branch: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+bash: syntax error near unexpected token `('
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ $ git push -u origin master
+bash: $: command not found
 ```
 
-### Make an empty Git repo
+# Step 2: Bob copies Alice's project, then submits some simple changes
 
 ```
-git init
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git clone https://github.com/bryanhirsch/rhymes.git
+Cloning into 'rhymes'...
+remote: Repository not found.
+fatal: repository 'https://github.com/bryanhirsch/rhymes.git/' not found
 
-### Make some readme.txt 4 a first commit (Optional)
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git checkout -b hickory-dickory
+fatal: A branch named 'hickory-dickory' already exists.
 
-```
-touch README.txt
-git add *
-git commit -m "First Commit"
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ wget https://www.acquia.com/sites/default/files/blog/hickory-dickory-dock.txt
+bash: wget: command not found
 
-### Add some random explanation about the project to the README file.
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ add hickory-dickory-dock.txt
+bash: add: command not found
 
-```
-echo 'HUEHUEHUEHUEHU.' >> README.txt
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git commit -m 'Added hickory-dickory-dock.txt.'
+On branch hickory-dickory
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+mastergit
 
-### Commit the repo update
+nothing added to commit but untracked files present (use "git add" to track)
 
-```
-git add *
-git commit -m "First Commit"
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git push origin hickory-dickory
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'hickory-dickory' on GitHub by visiting:
+remote: https://github.com/maulibrhm1/rhymes/pull/new/hickory-dickory
+remote:
+To https://github.com/maulibrhm1/rhymes.git
 
-### Review uncommitted changes. Then commit them.
-
-```
-git status
-git diff
-git add README.txt
-git commit -m 'Added project overview to README.txt'
-```
-
-### Download Alice favorite rhymes.
-
-```
-wget https://github.com/bryanhirsch/rhymes/blob/master/all-around-the-mulberry-bush.txt
-wget https://github.com/bryanhirsch/rhymes/blob/master/jack-and-jill.txt
-wget https://github.com/bryanhirsch/rhymes/blob/master/old-mother-hubbard.txt
-wget https://github.com/bryanhirsch/rhymes/blob/master/twinkle-twinkle.txt
-wget https://github.com/bryanhirsch/rhymes/blob/master/hokey-pokey.txt
-```
-
-### Final Task
-
-The Last task have been downloaded, but no commited. you can see this with
-
-```
-git status
-```
-
-Alice add all the rhyme at one by using
-
-```
-git add *
-git commit "Add All Song"
-```
-
-### Now, lets make the repo up in Github
-
-```
-git remote add origin https://github.com/MLuthfirR/rhyme.git
-git push -u origin master
-```
-
-## Step 2 - Copies project, then submits some simple changes
-
-###
-
-# First Bob clones his fork of Alice's rhymes project.
-
-# (If you're following along, replace bryanhirsch below with your own GitHub username.)
-
-```
-git clone https://github.com/bryanhirsch/rhymes.git
-cd rhymes
-```
-
-# To keep things simple and tidy, Bob will keep the master branch in sync with Alice's version of the master branch.
-
-# Bob creates a new branch, where he will store his changes.
-
-```
-git checkout -b hickory-dickory
-```
-
-# Add Hickory Dickory Dock to the repo.
-
-```
-wget https://www.acquia.com/sites/default/files/blog/hickory-dickory-dock.txt...
-add hickory-dickory-dock.txt
-git commit -m 'Added hickory-dickory-dock.txt.'
-```
-
-# Bob pushes the changes from his local copy of rhymes up to GitHub.
-
-```
-git push origin hickory-dickory
+- [new branch] hickory-dickory -> hickory-dickory
 ```
 
 # Step 3: Alice reviews and accepts Bob's simple changes
 
-# Alice renames origin -> alice.
-
 ```
-cd rhymes
-git remote rename origin alice
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ cd rhymes
+bash: cd: rhymes: No such file or directory
 
-# Add a remote pointing to Bob's copy of the project.
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git remote add bob https://github.com/maulibrhm1/rhymes
 
-```
-git remote add bob https://github.com/bryanhirsch/rhymes.git
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git remote
+bob
+origin
 
-# Review remotes.
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git remote -v
+bob https://github.com/maulibrhm1/rhymes (fetch)
+bob https://github.com/maulibrhm1/rhymes (push)
+origin https://github.com/maulibrhm1/rhymes.git (fetch)
+origin https://github.com/maulibrhm1/rhymes.git (push)
 
-```
-git remote
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git fetch bob
+gFrom https://github.com/maulibrhm1/rhymes
 
-# Confirm each remote points to the correct repository.
+- [new branch] hickory-dickory -> bob/hickory-dickory
+- [new branch] master -> bob/master
+  i
+  lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+  $ git branch -a
+- hickory-dickory
+  master
+  remotes/bob/hickory-dickory
+  remotes/bob/master
+  remotes/origin/hickory-dickory
+  remotes/origin/master
 
-```
-git remote -v
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git log -1 -p
+commit f76b2bcee138f78f27298cfc48c7a9230eea7ae9 (HEAD -> hickory-dickory, origin/master, origin/hickory-dickory, bob/master, bob/hickory-dickory, master)
+Author: captaiinmelody <56020078+captaiinmelody@users.noreply.github.com>
+Date: Wed Mar 2 19:24:07 2022 +0700
 
-# Fetch a copy of Bob's work.
+    Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
 
-```
-git fetch bob
-```
+diff --git a/readme.txt b/readme.txt
+index e69de29..c83e022 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -0,0 +1 @@
++This repo is a collection of my favorite nursery rhymes.
 
-# Review all the branches (both local and remote).
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (hickory-dickory)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
 
-```
-git branch -a
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git merge hickory-dickory
+Already up to date.
 
-# Check out a local copy of Bob's work and review it.
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git branched -D hickory-dickory
+git: 'branched' is not a git command. See 'git --help'.
 
-```
-git checkout -b hickory-dickory bob/hickory-dickory
-git diff master hickory-dickory
-git log -1 -p
-```
-
-# Checkout master and merge Bobs changes in.
-
-```
-git checkout master
-git merge hickory-dickory
-```
-
-# Push changes up to GitHub git push alice master
-
-# Remove our local copy of the hickory-dickory branch. We don't need it anymore.
-
-```
-git branch -D hickory-dickory
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$
 ```
 
 # Step 4: Bob makes lots of changes
 
 ```
-cd rhymes
-git remote rename origin bob
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git remote add alice https://github.com/maulibrhm1/rhymes.git
 
-# Add a remote pointing to Alice's copy of the project.
 
-```
-git remote add alice https://github.com/bryanhirsch/rhymes.git
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git remote
+alice
+bob
+origin
 
-# Review remotes.
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git remote -v
+alice   https://github.com/maulibrhm1/rhymes.git (fetch)
+alice   https://github.com/maulibrhm1/rhymes.git (push)
+bob     https://github.com/maulibrhm1/rhymes (fetch)
+bob     https://github.com/maulibrhm1/rhymes (push)
+origin  https://github.com/maulibrhm1/rhymes.git (fetch)
+origin  https://github.com/maulibrhm1/rhymes.git (push)
 
-```
-git remote
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git remote update
+Fetching origin
+Fetching bob
+Fetching alice
+From https://github.com/maulibrhm1/rhymes
+ * [new branch]      hickory-dickory -> alice/hickory-dickory
+ * [new branch]      master          -> alice/master
 
-# Confirm each remote points to the correct repository.
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git remote master
+error: Unknown subcommand: master
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
 
-```
-git remote -v
-```
+    -v, --verbose         be verbose; must be placed before a subcommand
 
-# Update master branch.
 
-# (As an alternative to fetch, use `remote update` to update all your remotes.)
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
 
-```
-git remote update
-git checkout master
-git merge alice/master
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git merge alice/master
+Already up to date.
 
-# To confirm you did everything right check the difference between your local copy of master
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git diff alice/master
 
-# and Alice's master branch. There should be no difference.
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git push bob master
+Everything up-to-date
 
-```
-git diff alice/master
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (master)
+$ git checkout -b bobs-changes
+Switched to a new branch 'bobs-changes'
 
-# Push to GitHub
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ wget https://www.acquia.com/sites/default/files/blog/jack-be-nimble.txt
+bash: wget: command not found
 
-```
-git push bob master
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git add jack-be-nimble.txt
+fatal: pathspec 'jack-be-nimble.txt' did not match any files
 
-# new branch
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git commit -m 'Added jack-be-nimble.txt.'
+On branch bobs-changes
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mastergit
 
-```
-git checkout -b bobs-changes
-```
+nothing added to commit but untracked files present (use "git add" to track)
 
-# more rhymes
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ wget https://www.acquia.com/sites/default/files/blog/mother-goose.tx
+bash: wget: command not found
 
-```
-wget https://www.acquia.com/sites/default/files/blog/jack-be-nimble.txt
-git add jack-be-nimble.txt
-git commit -m 'Added jack-be-nimble.txt.'
-wget https://www.acquia.com/sites/default/files/blog/mother-goose.txt
-git add mother-goose.txt
-git commit -m 'Added mother-goose.txt.'
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git add mother-goose.txt
+fatal: pathspec 'mother-goose.txt' did not match any files
 
-# changes readme.txt
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git commit -m 'Added mother-goose.txt.'
+On branch bobs-changes
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mastergit
 
-```
-git commit -am 'Updated README.txt.'
-```
+nothing added to commit but untracked files present (use "git add" to track)
 
-# flex typo
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git commit -am 'Updated README.txt.'
+On branch bobs-changes
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mastergit
 
-# Review changes word-by-word. Commit.
+nothing added to commit but untracked files present (use "git add" to track)
 
-```
-git diff --word-diff
-git commit -am 'Fixed typo in README.txt.'
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ # Review changes word-by-word. Commit.
 
-# changes wording
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git diff --word-diff
 
-```
-git commit -am 'Updated README.txt.'
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git commit -am 'Fixed typo in README.txt.'
+On branch bobs-changes
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mastergit
 
-# changes wording again
+nothing added to commit but untracked files present (use "git add" to track)
 
-```
-git commit -am 'Updated README.txt.'
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git commit -am 'Updated README.txt.'
+On branch bobs-changes
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mastergit
 
-# add few more rhymes
+nothing added to commit but untracked files present (use "git add" to track)
 
-```
-wget https://www.acquia.com/sites/default/files/blog/old-king-cole.txt
-git add old-king-cole.txt git commit -m 'Added old-king-cole.txt.'
-wget https://www.acquia.com/sites/default/files/blog/twinkle-twinkle.txt
-git add twinkle-twinkle.txt
-git commit -m 'Added twinkle-twinkle.txt.'
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git commit -am 'Updated README.txt.'
+On branch bobs-changes
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mastergit
 
-# update rhymes
+nothing added to commit but untracked files present (use "git add" to track)
 
-```
-git commit -am 'Updated README.txt.'
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ wget https://www.acquia.com/sites/default/files/blog/old-king-cole.txt
+bash: wget: command not found
 
-# review log
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git add old-king-cole.txt git commit -m 'Added old-king-cole.txt.'
+error: unknown switch `m'
+usage: git add [<options>] [--] <pathspec>...
 
-```
-git log git log --oneline
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ wget https://www.acquia.com/sites/default/files/blog/twinkle-twinkle.txt
+bash: wget: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git add twinkle-twinkle.txt
+fatal: pathspec 'twinkle-twinkle.txt' did not match any files
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git commit -m 'Added twinkle-twinkle.txt.'
+On branch bobs-changes
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mastergit
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git commit -am 'Updated README.txt.'
+On branch bobs-changes
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mastergit
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git log git log --oneline
+fatal: ambiguous argument 'git': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$
+
 ```
 
 # Step 5: Bob cleans up his work before submitting
 
 ```
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ $ git log --oneline
+bash: $: command not found
+
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
 $ git log --oneline
-77886c1 Updated README.txt.
-fbe874e Added old-king-cole.txt.
-6256b8a Updated README.txt.
-d1ba481 Updated README.txt.
-b7e5732 Fixed typo in README.txt.
-642477c Updated README.txt.
-9e48a45 Added mother-goose.txt.
-8aea9be Added jack-be-nimble.txt.
-4b15370 Added hickory-dickory-dock.txt.
-4ada881 Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
-10e0e68 Added jack-and-jill.txt.
-6a69e0f Added all-around-the-mulberry-bush.txt.
-d30493a Added project overview to README.txt
-710f4bd First commit.
-$
-```
+f76b2bc (HEAD -> bobs-changes, origin/master, origin/hickory-dickory, bob/master, bob/hickory-dickory, alice/master, alice/hickory-dickory, master, hickory-dickory) Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
+7982b1f first commit
 
-# Rewrite history going back as far as commit 4b15370.
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ 77886c1 Updated README.txt.
+bash: 77886c1: command not found
 
-```
-git rebase -i 4b15370
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ fbe874e Added old-king-cole.txt.
+bash: fbe874e: command not found
 
-pick 8aea9be Added jack-be-nimble.txt.
-pick 9e48a45 Added mother-goose.txt.
-pick 642477c Updated README.txt.
-pick b7e5732 Fixed typo in README.txt.
-pick d1ba481 Updated README.txt.
-pick 6256b8a Updated README.txt.
-pick fbe874e Added old-king-cole.txt.
-pick 77886c1 Updated README.txt.
-```
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ 6256b8a Updated README.txt.
+bash: 6256b8a: command not found
 
-# Rebase 4b15370..77886c1 onto 4b15370
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ git rebase -i 4b15370
+fatal: invalid upstream '4b15370'
 
-#
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ pick 8aea9be Added jack-be-nimble.txt.
+bash: pick: command not found
 
-# Commands:
+lenovo@DESKTOP-RMHTUQ1 MINGW64 ~/Documents/GitHub/rhymes (bobs-changes)
+$ pick b7e5732 Fixed typo in README.txt
+bash: pick: command not found
 
-# p, pick = use commit
-
-# r, reword = use commit, but edit the commit message
-
-# e, edit = use commit, but stop for amending
-
-# s, squash = use commit, but meld into previous commit
-
-# f, fixup = like "squash", but discard this commit's log message
-
-# x, exec = run command (the rest of the line) using shell
-
-#
-
-# These lines can be re-ordered; they are executed from top to bottom.
-
-#
-
-# If you remove a line here THAT COMMIT WILL BE LOST.
-
-#
-
-# However, if you remove everything, the rebase will be aborted.
-
-#
-
-# Note that empty commits are commented out
-
-```
-pick 8aea9be Added jack-be-nimble.txt.
-pick 9e48a45 Added mother-goose.txt.
-pick fbe874e Added old-king-cole.txt.
-pick 642477c Updated README.txt.
-pick b7e5732 Fixed typo in README.txt.
-pick d1ba481 Updated README.txt.
-pick 6256b8a Updated README.txt.
-pick 77886c1 Updated README.txt.
-```
-
-# An interactive rebase session begins. A text editor opens a screen that looks like this (the stuff commented out at the bottom is a cheat sheet):
-
-```
-pick 8aea9be Added jack-be-nimble.txt.
-pick 9e48a45 Added mother-goose.txt.
-pick fbe874e Added old-king-cole.txt.
-pick 642477c Updated README.txt.
-squash b7e5732 Fixed typo in README.txt.
-squash d1ba481 Updated README.txt.
-squash 6256b8a Updated README.txt.
-squash 77886c1 Updated README.txt.
-```
-
-# First reorder the commits in the order you want them to be rearranged in the project's history:
-
-```
-pick 8aea9be Added jack-be-nimble.txt.
-pick 9e48a45 Added mother-goose.txt.
-pick fbe874e Added old-king-cole.txt.
-pick 642477c Updated README.txt.
-pick b7e5732 Fixed typo in README.txt.
-pick d1ba481 Updated README.txt.
-pick 6256b8a Updated README.txt.
-pick 77886c1 Updated README.txt.
-```
-
-# Next change "pick" to "squash" where we want to squash commits down to a single commit. (Squashes get squashed "up". In the example below, everything is being squashed into commit 642477c.)
-
-```
-pick 8aea9be Added jack-be-nimble.txt.
-pick 9e48a45 Added mother-goose.txt.
-pick fbe874e Added old-king-cole.txt.
-pick 642477c Updated README.txt.
-squash b7e5732 Fixed typo in README.txt.
-squash d1ba481 Updated README.txt.
-squash 6256b8a Updated README.txt.
-squash 77886c1 Updated README.txt.
-```
-
-# review commit history
-
-```
-$ git log --oneline
-80e8a59 Updated README.txt.
-1d57351 Added old-king-cole.txt.
-9e48a45 Added mother-goose.txt.
-8aea9be Added jack-be-nimble.txt.
-4b15370 Added hickory-dickory-dock.txt.
-4ada881 Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
-10e0e68 Added jack-and-jill.txt.
-6a69e0f Added all-around-the-mulberry-bush.txt.
-d30493a Added project overview to README.txt
-710f4bd First commit.
 ```
